@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./images/bookmark.png">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row"></div>
+        <header class="pt-4 pb-5 my-4 d-flex justify-content-center">
+            <h1>Bookmarker</h1>
+        </header>
+        
+        <main>
+            <div class="header d-flex justify-content-center align-items-baseline">
+                <h4 class="my-3"><i class="fa-solid fa-bookmark fs-3 me-1"></i>Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark fs-3 ms-1"></i></h4>
+            </div>
+            <div class="inputs">
+                <label for="sitename" class="fw-bold"><i class="fa-solid fa-book-bookmark my-2 me-2 ms-1"></i>Site Name</label>
+                <input type="text" id="siteName" class="form-control" placeholder="Bookmark Name">
+                <br>
+                <br>
+                <label for="siteurl" class="fw-bold"><i class="fa-solid fa-link my-2 me-2 ms-1"></i>Site URL</label>
+                <input type="text" id="siteUrl" class="form-control" placeholder="Website URL">
+            </div>
+            <div class="text-center">
+                <button id="btnSubmit" onclick="addSite()" class="btn btn-danger px-5 my-4">Submit</button>
+            </div>
+        </main>
+
+        <div class="links mt-3 p-2">
+            <table>
+
+                <thead class="border-bottom">
+                    <th class="fw-bolder">Index</th>
+                    <th class="fw-bolder">Website Name</th>
+                    <th class="fw-bolder">Visit</th>
+                    <th class="fw-bolder">Delete</th>
+                </thead>
+                <tbody id="trContainer">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+
+
+    <div id="layer"></div>
+    <div id="layerContainer">
+        <div id="popUp">
+
+    <div id="popUp1" class="rounded-2">
+        <div class="balls d-flex justify-content-between mb-3">
+            <div class="ballsContainer d-flex">
+                <p class="1 rounded-circle bg-danger"></p>
+                <p class="1 rounded-circle bg-warning"></p>
+                <p class="1 rounded-circle bg-success"></p>
+            </div>
+            <button id="close" class="btn "><i class="fa-solid fa-xmark fs-2"></i></button>
+        </div>
+        <h4>Site Name or Url is not valid, Please follow the rules below :</h4>
+        <h5><i class="fa-solid fa-circle-arrow-right me-2"></i>Site name must contain at least 3 characters</h5>
+        <h5><i class="fa-solid fa-circle-arrow-right me-2"></i>Site URL must be a valid one</h5>
+        
+    </div>
+</div>
+</div>
+
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
